@@ -6,9 +6,9 @@ const uploader = require("./../config/cloudinary");
 
 // /api/products/
 router.get("/", async (req, res, next) => {
-  const query = {};
+  let query = {};
   if (req.query.cat !== "all") {
-    const regex = new RegExp( req.query.cat, 'i');
+    const regex = new RegExp(req.query.cat, 'i');
     query = {
       name: {
         '$regex': regex

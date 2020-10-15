@@ -43,6 +43,8 @@ app.use("/api/categories", require("./routes/api.categories"));
 app.use("/api/orders", require("./routes/api.orders"));
 app.use("/api/favorites", require("./routes/api.favorites"));
 app.use("/api/payements", require("./routes/api.payements"));
+app.use("/api/messages", require("./routes/api.messages"));
+app.use("/api/contact", require("./routes/api.contact"));
 
 
 module.exports = app;
