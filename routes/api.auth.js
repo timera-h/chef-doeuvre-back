@@ -227,6 +227,9 @@ router.post("/signup", async (req, res, next) => {
 //    User: req.user
 //  });
 
+            // user.date = Date.now;
+            user.birthDate = Date.moment().format("DD MM YYYY");
+
             // on insère le nouvel utilisateur en bdd 
             await UserModel.create(user);
             res.redirect("/signin");
