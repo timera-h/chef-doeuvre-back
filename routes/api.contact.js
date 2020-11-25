@@ -35,7 +35,7 @@ router.post("/", async (req, res, next) => {
     console.log(req.body);
     sendMail(req.body)
         .then(() => {
-            console.log("?? reponse du mail");
+            console.log("?? mail envoyer");
             res.status(200).json("/contact");
         })
         .catch((err) => {
